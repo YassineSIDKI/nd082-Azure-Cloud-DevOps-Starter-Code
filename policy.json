@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "displayName":"tagging-policy",
+    "description":"this policy aims to deny the creation of any ressources without tags",
+    "mode": "Indexed",
+    "metadata": {
+        "version":"1.0.0",
+        "category":"Tags"
+    },
+    "parameters": {
+        "tagName": {
+            "type": "String",
+            "metadata": {
+                "displayName": "Tag Name",
+                "description": "Name of the tag"
+            }
+        }
+    },
+    "policyRule":{
+        "if": {
+            "field": "[concat('tags[', parameters('tagName'), ']')]",
+            "exists": "false"
+        },
+        "then": {
+            "effect": "deny"
+        }
+    }
+  }
+}
