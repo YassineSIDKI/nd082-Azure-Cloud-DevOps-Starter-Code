@@ -87,4 +87,8 @@ terraform apply PATH-TO/solution.plan
 
 ### Output
 
-**Your words here**
+You should get the following message:
+
+```
+Apply complete! Resources: 8 added, 0 changed, 0 destroyed.
+```
