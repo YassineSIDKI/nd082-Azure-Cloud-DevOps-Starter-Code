@@ -38,15 +38,15 @@ You have logged in. Now let us find all the subscriptions to which you have acce
 [
   {
     "cloudName": "AzureCloud",
-    "homeTenantId": "278ff48f-87f1-48e5-bdd3-86983d9368de",
-    "id": "8b067c66-77f0-4614-b93e-92c821b18915",
+    "homeTenantId": "xxxxxx",
+    "id": "xxx",
     "isDefault": true,
     "managedByTenants": [],
-    "name": "Free Trial",
+    "name": "xxx",
     "state": "Enabled",
-    "tenantId": "278ff48f-87f1-48e5-bdd3-86983d9368de",
+    "tenantId": "xxxx",
     "user": {
-      "name": "sidkiyassi@gmail.com",
+      "name": "xx@xxx.com",
       "type": "user"
     }
   }
