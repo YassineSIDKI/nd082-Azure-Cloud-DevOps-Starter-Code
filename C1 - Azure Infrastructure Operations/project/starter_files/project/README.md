@@ -119,42 +119,47 @@ export ARM_RESOURCE_GROUP=xxxx
 packer build server.json
 ```
 
+### Output
+
 - You should get an output-like:
   ![alt text]()
 
 3. Create resources with terraform
 
-First you should update the variables.tf
+All what you should do, is to update the `variables.tf`
 
-The first value you should change is the packer image resource group
-
-and the location where you want to create your resources
+- Change the `packer_image_rg` default value with the good one
+- Edit the `location` where you want to create resources
+- You are free to edit the other variables at your convenience. You should just keep `nb_instances` var greater than 2 to have a cluster of servers.
 
 The other variables depend on which configuration you want. Here is the details of each one:
 
--
--
--
+#### After changing the variables, you are done (Cool, isn't it !!)
 
-After changing the variables, you are done (Cool isn't it :) )
+- You can already create all your resources now by running this command
 
-You can already create all your resources now by running this command
+```
+terraform init
+```
+
+- This will generate folder : . Then run this command :
 
 ```
 terraform plan --out solution.plan
-
-terraform apply solution.plan
-yes
 ```
 
-3. Create a vm by Terraform
+You should see an output like this:
+![alt text]()
+
+- If you are ok with that, apply it:
+
+```
+terraform apply solution.plan
+```
 
 ### Output
 
-You should get the following message:
-
-```
-Apply complete! Resources: 8 added, 0 changed, 0 destroyed.
-```
-
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+- You should see a response like this:
+  ![alt text]()
+  You can check from portal that all resources are created
+  ![alt text]()
