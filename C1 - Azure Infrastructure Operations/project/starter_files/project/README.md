@@ -3,6 +3,9 @@
 ## Introduction
 
 In this project, you will create a scalable web server in azure using Packer and Terraform.
+You will start by creating a azure image with packer, which will represents a template for your servers, and then create all other resources by terraform.
+You will do the majority of tasks via command line.
+This project is for learning purposes
 
 ## Getting Started
 
