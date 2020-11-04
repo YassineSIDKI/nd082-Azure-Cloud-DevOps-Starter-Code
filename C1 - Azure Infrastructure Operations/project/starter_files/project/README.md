@@ -1,10 +1,10 @@
 # Azure Infrastructure Operations Project: Deploying a scalable IaaS web server in Azure
 
-### Introduction
+## Introduction
 
 In this project, you will create a scalable web server in azure using Packer and Terraform.
 
-### Getting Started
+## Getting Started
 
 To get started, you will need to:
 
@@ -16,11 +16,12 @@ git clone https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code.
 
 2. Install all dependencies (section below) and ensure that all of them are well set
 
-### Dependencies
+## Dependencies
 
 1. Create an [Azure Account](https://portal.azure.com)
-2. Install the [Azure command line interface](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
-   Tap this command
+2. Install the [Azure command line interface](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest).
+
+Then, run this command :
 
 ```
 az login
@@ -49,80 +50,77 @@ You should be able to login and see output like this:
 
 3. Install [Packer](https://www.packer.io/downloads)
 
-Add packer path to your environment variable and tap this command
+Add packer path to your environment variable and run this command
 
 ```
 packer -version
 ```
 
-you should get the packer version
+You should get the packer version in output
 
 4. Install [Terraform](https://www.terraform.io/downloads.html)
-   Add terraform path to your environment variable and tap this command
+   Add terraform path to your environment variable and run this command
 
 ```
 terraform -version
 ```
 
-you should get the terraform version
+You should get the terraform version in output
 
-### Instructions
+## Instructions
 
-Once you setup your environement, you should follow the instructions bellow :
-
-1. Creating a policy (Optional)
-
-We will create a policy to deny creating resoucres without tags. This is up to you, if you are not intereseted to use this policy you can skip to next section.
-
-You should first create the policy based on the policy.json
-
-```
-az policy create
-```
-
-Then assign it :
-
-```
-az policy assingment
-```
-
-2. Creating packer image
+1. Create packer image
 
 To create your azure image via packer, you should first set some variables in your environement.
 These variables are : `client_id` `subscription_id` `client_secret` and `tenant_id`
 
-You should set what is called Azure active directory service principale. Here is a good tutorial explaining how to do that: https://www.youtube.com/watch?v=Hg-YsUITnck
+To do that you should follow these steps:
 
-After doing it, you should see something like this
+- Set an Azure active directory service principale. Here is a good tutorial explaining how to do that: https://www.youtube.com/watch?v=Hg-YsUITnck
+- Register an app via "App registrations". You should get a picture like below:
+  ![alt text]()
 
-From the application view you can get, Application_id and tenant_id
-
-You can get the client_secret from this view
-
-Go to subscription, IAM and add your app as contributor
-
-When you are done with this, you should add your variable to environment like this
+- Go to one of your owned app (which you will use for this project), and copy `client_id` (which is the applicationçid) and `tenant_id`
+- Add them to your environment by running this command :
 
 ```
-export ARM_CLIENT_ID=''
-export ARM_CLIENT_SECRET=''
-export ARM_SUBSCRIPTION_ID=''
-export ARM_TENANT_ID=''
+export ARM_CLIENT_ID=xxxx
+export ARM_TENANT_ID=xxx
 ```
 
-You should also add your resource group name, which you created already
+- In the principal menu, add client secret from 'Certification & secrets'. After doing that you should see something like this :
+  ![alt text]()
+
+- add client_secret to your environment by running this command
 
 ```
-ARM_RESOURCE_GROUP
+export ARM_CLIENT_SECRET=xxxx
 ```
 
-Read the server.json first to see if you are ok with image configuration.
+- Go to Subscriptions from portal search, get your subscription_id and add it to evironment
 
-After you finish, run this command:
+```
+export ARM_SUBSCRIPTION_ID=xxxx
+```
+
+- Add your app as an autorized app for this subscription. Do this from Access controm IAM.
+- From Role assignement tab, you should have a view like this
+  ![alt text]()
+
+- Add the resource group name that you already created in azure to your environment
+
+```
+export ARM_RESOURCE_GROUP=xxxx
+```
+
+- Read the server.json first to see if you are ok with image configuration run the packer command
 
 ```
 packer build server.json
 ```
+
+- You should get an output-like:
+  ![alt text]()
 
 3. Create resources with terraform
 
@@ -158,3 +156,5 @@ You should get the following message:
 ```
 Apply complete! Resources: 8 added, 0 changed, 0 destroyed.
 ```
+
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
