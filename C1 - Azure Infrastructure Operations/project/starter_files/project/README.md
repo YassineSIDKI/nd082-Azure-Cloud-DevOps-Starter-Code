@@ -162,4 +162,4 @@ terraform apply solution.plan
 
 You can check the resources created from azure portal :
 
-![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/screenshots/resultPortalAzure.png?raw=true
+![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/screenshots/resultPortalAzure.png?raw=true)
