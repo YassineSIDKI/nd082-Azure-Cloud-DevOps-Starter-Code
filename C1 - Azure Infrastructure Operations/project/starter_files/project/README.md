@@ -72,7 +72,7 @@ To do that, here are the steps to follow:
 - Set **Service principale** vi **Azure active directory** . Here is a good video explaining how to do that: https://www.youtube.com/watch?v=Hg-YsUITnck
 - Register an app via **App registrations**. You should get a view like below:
 
-  ![alt text](https://raw.githubusercontent.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/appRegistration.png)
+  ![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/screenshots/appRegistration.png?raw=true)
 
 - From your owned app, go to the app you want to use for this project, and copy `Application ID` and `Tenant ID`
 - Add them to your environment variables by running this command :
@@ -84,7 +84,7 @@ export ARM_TENANT_ID=`Tenant ID`
 
 - Add client secret from **Certification & secrets**. You should see a view like this :
 
-  ![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/clientSecret.png?raw=true)
+  ![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/screenshots/clientSecret.png?raw=true)
 
 - Add client_secret to your environment variables by running this command
 
@@ -102,7 +102,7 @@ export ARM_SUBSCRIPTION_ID=`subscription_id`
 
 - From Role assignement tab, you should have a view like this
 
-  ![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/IAMpacker.png?raw=true)
+  ![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/screenshots/IAMpacker.png?raw=true)
 
 - Add the resource group name, that you already created in azure and on which you want add your resources, to your environment variables:
 
@@ -122,7 +122,7 @@ packer build server.json
 
 You should get as an output a response like this :
 
-![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/packerOutput.png?raw=true)
+![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/screenshots/packerOutput.png?raw=true)
 
 ### Create resources with terraform
 
@@ -146,7 +146,7 @@ terraform plan --out solution.plan
 
 - This generate the `solution.plan` file. You should see, in the tail of your output, a response like this:
 
-![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/tfPlanOutput.png?raw=true)
+![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/screenshots/tfPlanOutput.png?raw=true)
 
 - If you are ok with that, apply it:
 
@@ -156,10 +156,10 @@ terraform apply solution.plan
 
 - You should see in the tail of your output, a response like this:
 
-  ![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/tfOutput.png?raw=true)
+  ![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/screenshots/tfOutput.png?raw=true)
 
 ### Result in Azure Portal
 
 You can check the resources created from azure portal :
 
-![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/resultPortalAzure.png?raw=true)
+![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/screenshots/resultPortalAzure.png?raw=true
