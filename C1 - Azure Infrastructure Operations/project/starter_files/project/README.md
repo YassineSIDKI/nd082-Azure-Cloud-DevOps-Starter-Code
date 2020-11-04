@@ -160,5 +160,6 @@ terraform apply solution.plan
 
 ### Result in Azure Portal
 
-You can check from portal that all resources are created
+You can check the resources created from azure portal :
+
 ![alt text](https://github.com/YassineSIDKI/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C1%20-%20Azure%20Infrastructure%20Operations/project/starter_files/project/resultPortalAzure.png?raw=true)
